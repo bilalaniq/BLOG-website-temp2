@@ -1,10 +1,4 @@
-
-// maintain allman bracket style for consistency
-
-// react
 import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
-
-// chakra-ui
 import { Container } from '@chakra-ui/react';
 
 // components
@@ -13,12 +7,12 @@ import Footer from './components/Footer';
 
 // pages
 import HomePage from './pages/HomePage';
-import BlogPage from './pages/BlogPage';
-import BlogPostPage from './pages/BlogPostPage';
-import BlogDirectoryPage from './pages/BlogDirectoryPage';
 import PortfolioPage from './pages/PortfolioPage';
+import BlogPage from './pages/BlogPage';
+import F_blog from './pages/blogs/my-first-post'; // <-- import your blog detail page
 
-function Layout() {
+function Layout() 
+{
     return (
         <>
             <Navbar />
@@ -30,25 +24,17 @@ function Layout() {
     );
 }
 
-function Router({ showContent, toggleContent, contentLoaded }: { showContent: any, toggleContent: any, contentLoaded: any }) {
-
+function Router({ showContent, toggleContent, contentLoaded }: { showContent: any, toggleContent: any, contentLoaded: any }) 
+{
     const routes = [
         {
             path: '/',
             element: <Layout />,
             children: [
-                {
-                    index: true,
-                    element: <HomePage
-                        showContent={showContent}
-                        toggleContent={toggleContent}
-                        contentLoaded={contentLoaded}
-                    />
-                },
+                { index: true, element: <HomePage showContent={showContent} toggleContent={toggleContent} contentLoaded={contentLoaded} /> },
                 { path: 'portfolio', element: <PortfolioPage /> },
                 { path: 'blog', element: <BlogPage /> },
-                { path: 'blog/directory', element: <BlogDirectoryPage /> },
-                { path: 'blog/:id', element: <BlogPostPage /> },
+                { path: 'blog/my-first-post', element: <F_blog /> } // <-- add yopage route here
             ]
         }
     ];

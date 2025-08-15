@@ -1,0 +1,62 @@
+{
+  "cacheItemsMap": {
+    "my-first-post.mdx": {
+      "document": {
+        "title": "My First Post",
+        "publishedAt": "2023-01-01T00:00:00.000Z",
+        "description": "Welcome to my blog",
+        "image": "/images/blog-hero.jpg",
+        "author": "Jane Doe",
+        "tags": [
+          "welcome",
+          "introduction\r"
+        ],
+        "body": {
+          "raw": "\r\n\r\n\r\njshddddddddddddddddddddddddddddddddddddddddddddddddddddddd\r\n\r\nsd\r\nsdsqdsdsjshddddddddddddddddddddddddddddddddddddddddddddddddddddddd\r\n\r\nsd\r\nsdsqdsdsjshddddddddddddddddddddddddddddddddddddddddddddddddddddddd\r\n\r\nsd\r\nsdsqdsdsjshddddddddddddddddddddddddddddddddddddddddddddddddddddddd\r\n\r\nsd\r\nsdsqdsdsjshddddddddddddddddddddddddddddddddddddddddddddddddddddddd\r\n\r\nsd\r\nsdsqdsds",
+          "html": "<p>jshddddddddddddddddddddddddddddddddddddddddddddddddddddddd</p>\n<p>sd\r\nsdsqdsdsjshddddddddddddddddddddddddddddddddddddddddddddddddddddddd</p>\n<p>sd\r\nsdsqdsdsjshddddddddddddddddddddddddddddddddddddddddddddddddddddddd</p>\n<p>sd\r\nsdsqdsdsjshddddddddddddddddddddddddddddddddddddddddddddddddddddddd</p>\n<p>sd\r\nsdsqdsdsjshddddddddddddddddddddddddddddddddddddddddddddddddddddddd</p>\n<p>sd\r\nsdsqdsds</p>"
+        },
+        "_id": "my-first-post.mdx",
+        "_raw": {
+          "sourceFilePath": "my-first-post.mdx",
+          "sourceFileName": "my-first-post.mdx",
+          "sourceFileDir": ".",
+          "contentType": "mdx",
+          "flattenedPath": "my-first-post"
+        },
+        "type": "Blog"
+      },
+      "documentHash": "1755180892041",
+      "hasWarnings": false,
+      "documentTypeName": "Blog"
+    },
+    "secund.mdx": {
+      "document": {
+        "title": "My First Post",
+        "publishedAt": "2025-01-01T00:00:00.000Z",
+        "description": "Welcome to my blog",
+        "image": "/images/blog-hero.jpg",
+        "author": "Jane Doe",
+        "tags": [
+          "yo",
+          "introduction\r"
+        ],
+        "body": {
+          "raw": "",
+          "html": ""
+        },
+        "_id": "secund.mdx",
+        "_raw": {
+          "sourceFilePath": "secund.mdx",
+          "sourceFileName": "secund.mdx",
+          "sourceFileDir": ".",
+          "contentType": "mdx",
+          "flattenedPath": "secund"
+        },
+        "type": "Blog"
+      },
+      "documentHash": "1755180437565",
+      "hasWarnings": false,
+      "documentTypeName": "Blog"
+    }
+  }
+}

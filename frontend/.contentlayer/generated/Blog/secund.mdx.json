@@ -1,0 +1,26 @@
+{
+  "title": "My First Post",
+  "publishedAt": "2025-01-01T00:00:00.000Z",
+  "description": "Welcome to my blog",
+  "image": "/images/blog-hero.jpg",
+  "author": "Jane Doe",
+  "tags": [
+    "yo",
+    "introduction\r"
+  ],
+  "body": {
+    "raw": "",
+    "html": ""
+  },
+  "_id": "secund.mdx",
+  "_raw": {
+    "sourceFilePath": "secund.mdx",
+    "sourceFileName": "secund.mdx",
+    "sourceFileDir": ".",
+    "contentType": "mdx",
+    "flattenedPath": "secund"
+  },
+  "type": "Blog",
+  "url": "/blogs/secund",
+  "formattedDate": "January 1, 2025"
+}

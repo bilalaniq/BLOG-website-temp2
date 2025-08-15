@@ -3,27 +3,21 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react-swc'
 
-// https://vitejs.dev/config/
-export default defineConfig(({ mode }) => 
-{
-
-  if(mode === 'production') 
-  {
+export default defineConfig(({ mode }) => {
+  if (mode === 'production') {
     process.env.NODE_ENV = 'production';
-  } 
-  else 
-  {
+  } else {
     process.env.NODE_ENV = 'development';
   }
 
   return {
+    base: '/Nullsect/', // <-- Add this line
     plugins: [react()],
     build: {
       sourcemap: true,
       rollupOptions: {
         output: {
           manualChunks: (id: string) => {
-            // Vendor chunks - keep these separate for caching
             if (id.includes('node_modules')) {
               if (id.includes('react') || id.includes('react-dom') || id.includes('react-router')) {
                 return 'react-vendor';
@@ -32,41 +26,28 @@ export default defineConfig(({ mode }) =>
                 return 'chakra-vendor';
               }
               if (id.includes('react-helmet-async') || id.includes('framer-motion') ||
-                  id.includes('react-markdown') || id.includes('react-syntax-highlighter') || 
-                  id.includes('rehype') || id.includes('remark') ||
-                  id.includes('jwt-decode') || id.includes('react-hook-form') || 
-                  id.includes('react-lazy-load-image-component')) {
+                id.includes('react-markdown') || id.includes('react-syntax-highlighter') ||
+                id.includes('rehype') || id.includes('remark') ||
+                id.includes('jwt-decode') || id.includes('react-hook-form') ||
+                id.includes('react-lazy-load-image-component')) {
                 return 'utility-vendor';
               }
               return 'vendor';
             }
-            
-            // Reduce chunk granularity - combine related pages
-            if (id.includes('/pages/Blog')) {
-              return 'blog-pages';
-            }
-            if (id.includes('/pages/')) {
-              return 'app-pages';
-            }
-            
-            // Combine all sections into fewer chunks
-            if (id.includes('/sections/')) {
-              return 'app-sections';
-            }
-            
-            // Keep blog components separate as they're only loaded when needed
-            if (id.includes('/components/Blog') || id.includes('/components/Login') || 
-                id.includes('/components/MakePost') || id.includes('/components/EditPost') ||
-                id.includes('/components/PostEditor')) {
-              return 'blog-components';
-            }
+
+            if (id.includes('/pages/Blog')) return 'blog-pages';
+            if (id.includes('/pages/')) return 'app-pages';
+            if (id.includes('/sections/')) return 'app-sections';
+            if (id.includes('/components/Blog') || id.includes('/components/Login') ||
+              id.includes('/components/MakePost') || id.includes('/components/EditPost') ||
+              id.includes('/components/PostEditor')) return 'blog-components';
           }
         }
       },
       chunkSizeWarningLimit: 1000
     },
     server: {
-      port: 5173, 
+      port: 5173,
     },
   }
 })
