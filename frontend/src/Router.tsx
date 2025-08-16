@@ -9,10 +9,9 @@ import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import PortfolioPage from './pages/PortfolioPage';
 import BlogPage from './pages/BlogPage';
-import F_blog from './pages/blogs/my-first-post'; // <-- import your blog detail page
+import F_blog from './pages/blogs/my-first-post';
 
-function Layout() 
-{
+function Layout() {
     return (
         <>
             <Navbar />
@@ -24,22 +23,34 @@ function Layout()
     );
 }
 
-function Router({ showContent, toggleContent, contentLoaded }: { showContent: any, toggleContent: any, contentLoaded: any }) 
-{
+function Router({ showContent, toggleContent, contentLoaded }: {
+    showContent: any,
+    toggleContent: any,
+    contentLoaded: any
+}) {
     const routes = [
         {
             path: '/',
             element: <Layout />,
             children: [
-                { index: true, element: <HomePage showContent={showContent} toggleContent={toggleContent} contentLoaded={contentLoaded} /> },
+                {
+                    index: true,
+                    element: <HomePage
+                        showContent={showContent}
+                        toggleContent={toggleContent}
+                        contentLoaded={contentLoaded}
+                    />
+                },
                 { path: 'portfolio', element: <PortfolioPage /> },
                 { path: 'blog', element: <BlogPage /> },
-                { path: 'blog/my-first-post', element: <F_blog /> } // <-- add yopage route here
+                { path: 'blog/my-first-post', element: <F_blog /> }
             ]
         }
     ];
 
-    const router = createBrowserRouter(routes);
+    const router = createBrowserRouter(routes, {
+        basename: import.meta.env.BASE_URL // Add this line
+    });
 
     return <RouterProvider router={router} />;
 }

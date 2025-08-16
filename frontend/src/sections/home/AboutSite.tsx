@@ -10,7 +10,7 @@ function AboutSite() {
                 This site was designed with the purpose to replace my old site <Link href="https://Nullsect.github.io" color={"gray.300"} _hover={{ color: "yellow" }} isExternal>bikatr7.github.io</Link> (it's a redirect now so take a look at the <Link href="https://github.com/bilalaniq/bilalaniq.github.io" color={"gray.300"} _hover={{ color: "yellow" }} isExternal>GitHub Repository</Link>), which was a simple HTML/CSS/JS site. Frankly, it looked terrible, but it was my first exploration into web development.
             </Text>
             <Text fontSize="md" marginBottom="4" color="gray.500">
-                Thankfully, after a few months and making a site for my LLC (<Link href="https://bilalaniq.org" color={"gray.300"} _hover={{ color: "yellow" }} isExternal>kakusui.org</Link> btw for those interested), I learned a lot about React and proper web design. This site is the result of that learning and I'm quite proud of it. Since both of those, over a year has passed. Currently pondering a full redesign and turning it into a portal for my homelab.
+                Thankfully, after a few months and making a site for my LLC (<Link href="https://Nullsect.github.io" color={"gray.300"} _hover={{ color: "yellow" }} isExternal>kakusui.org</Link> btw for those interested), I learned a lot about React and proper web design. This site is the result of that learning and I'm quite proud of it. Since both of those, over a year has passed. Currently pondering a full redesign and turning it into a portal for my homelab.
             </Text>
             <Text fontSize="md" marginBottom="4" color="gray.500">
                 But yes, this site is made with Vite and React. A nice and simple site that I can easily update and maintain.
