@@ -1,1 +1,1 @@
-my personel blog 
+just an blog website (incomplete)
